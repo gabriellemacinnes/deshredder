@@ -1,0 +1,12 @@
+deeprec-cp20/.venv/
+
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+.DS_Store
+.env
+
+*.log
+*.tmp
+*.swp

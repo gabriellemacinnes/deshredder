@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Shredded Paper Images</title>
+
+    <!-- style for about icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- style sheet for other page styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- title and about section (can be toggled)-->
+    <h1>The paper de-shredder</h1>
+
+    <h4 onclick="toggleAbout()">About
+        <i id="toggle-icon" class="fas fa-chevron-down toggle-icon"></i> 
+    </h4>
+
+    <div class="about-info" id="about-info">
+        <h4>The paper de-shredder is an accessible web app for reconstructing shredded documents.</h4>
+        <h4>Upload each document fragment by browsing the requested file and using the "Add Fragment" button.</h4>
+        <h4>Press the "Deshred" button to view the reconstructed document.</h4>
+    </div>
+
+    <!-- form to submitted the fragmented document pieces to be deshredded -->
+    <form method="post" action="/" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <br><br>
+        <input class="button" type="submit" name="add_image" value="Upload scan">
+        <input class="button2" type="submit" name="deshred" value="Deshred">
+        <input class="button3" type="submit" name="clear" value="Clear">
+    </form>
+
+    <!-- show the images currently uploaded -->
+    <h2>Uploaded images:</h2>
+    <div class="preview2">
+        {% for image in images %}
+            <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Uploaded Image">
+        {% endfor %}
+    </div>
+
+    <!-- show the shreds -->
+    {% if fragments %}
+    <h2>Extracted shredded fragments:</h2>
+    <div class="preview">
+        {% for fragment in fragments %}
+            <img src="{{ url_for('static', filename='fragments/document/strips/' + fragment) }}" alt="Uploaded Image">
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if output_image %}
+        <h2>Reconstructed Document:</h2>
+        <img id="output" src="{{ url_for('static', filename='output/' + output_image) }}" alt="Output Image">
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

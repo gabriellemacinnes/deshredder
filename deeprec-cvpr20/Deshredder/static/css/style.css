@@ -1,0 +1,151 @@
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: black;
+
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.preview img {
+    width: 20px;
+    height: 400px;
+    object-fit: cover;
+    margin: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.preview2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.preview2 img {
+    height: 400px;
+    object-fit: cover;
+    margin: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #447baa;
+}
+
+.button:hover {
+    background-color: #284966;
+    color: white;
+}
+
+.button2 {
+    border: none;
+    background-color: rgb(56, 119, 50);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button2:hover {
+    background-color: #1f513c;
+    color: white;
+}
+
+.button3 {
+    border: none;
+    background-color: rgb(156, 31, 31);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button3:hover {
+    background-color: #651e1e;
+    color: white;
+}
+
+input[type=file]::file-selector-button {
+    background-color: #636363;
+    color: white;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #444444;
+    color: white;
+}
+
+h4 {
+    cursor: pointer;
+    text-align: center;
+}
+
+.about-info {
+    display: none;
+    background-color: rgb(213, 213, 213);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.toggle-icon {
+    margin-left: 8px;
+    transform: rotate(270deg);
+}
+
+.open {
+    transform: rotate(0deg);
+}
+
+#output {
+    height: 400px;
+}

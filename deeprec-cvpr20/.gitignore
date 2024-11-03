@@ -1,0 +1,8 @@
+.venv
+__pycache__/
+datasets/
+*.pyc
+traindata/
+!traindata/cdip_0.2_1000_32x64_128_fire3_1.0_0.1
+concorde/
+qsopt/
