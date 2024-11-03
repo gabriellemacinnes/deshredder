@@ -17,9 +17,16 @@
     </h4>
 
     <div class="about-info" id="about-info">
-        <h4>The paper de-shredder is an accessible web app for reconstructing shredded documents.</h4>
-        <h4>Upload each document fragment by browsing the requested file and using the "Add Fragment" button.</h4>
-        <h4>Press the "Deshred" button to view the reconstructed document.</h4>
+        <p><b>The paper de-shredder is an accessible web app for reconstructing shredded documents.</b></p>
+        <br>
+        <p><b>Instructions:</b> </p>
+        <p>1. Upload a shredded document scan by browsing the file(s) and using the "Upload scan" button.</p>
+        <p>2. Press the "Deshred" button to display the extracted individual fragments and the reconstructed document.</p>
+        <br>
+        <p>Web application by Gabrielle Lavoie and Gabrielle MacInnes - Something Awesome Project UNSW COMP6841</p>
+        <br>
+        <p><b>De-shredding model credits:</b></p>
+        <p>Li, Peng & Fang, Xi & Pan, Lianglu & Piao, Yi & Jiao, Mengjun. (2014). Reconstruction of Shredded Paper Documents by Feature Matching. Mathematical Problems in Engineering. 2014. 1-9. 10.1155/2014/514748</p>
     </div>
 
     <!-- form to submitted the fragmented document pieces to be deshredded -->
@@ -50,7 +57,7 @@
     {% endif %}
 
     {% if output_image %}
-        <h2>Reconstructed Document:</h2>
+        <h2 id="hii">Reconstructed Document:</h2>
         <img id="output" src="{{ url_for('static', filename='output/' + output_image) }}" alt="Output Image">
     {% endif %}
 
